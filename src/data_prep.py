@@ -44,3 +44,5 @@ def prep_image(path_to_dataset, aug_flip=False, aug_brightness=False, aug_noise=
 
         img = cv2.imread(img_full_path)
         img = cv2.resize(img, (1280, 720))
+
+        example = _create_tf_example(img=img, label=0.0)
